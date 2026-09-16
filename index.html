@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="A private birthday broadcast">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Birthday FM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260916-2">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main id="app">
+    <section id="landing-screen" class="screen lock-screen" aria-labelledby="lock-title">
+      <div class="station-mark">✳</div>
+      <p class="eyebrow">PRIVATE BROADCAST · 2026</p>
+      <h1 id="lock-title">[HER NAME] <span>FM</span></h1>
+      <p class="lock-copy">A little birthday transmission,<br>intended for one listener.</p>
+      <div class="countdown-wrap" aria-live="polite">
+        <p class="countdown-label">COUNTING DOWN TO YOUR BIRTHDAY</p>
+        <div class="countdown" aria-label="Countdown to birthday"><div><strong id="days">00</strong><span>DAYS</span></div><i>:</i><div><strong id="hours">00</strong><span>HOURS</span></div><i>:</i><div><strong id="minutes">00</strong><span>MINUTES</span></div><i>:</i><div><strong id="seconds">00</strong><span>SECONDS</span></div></div>
+      </div>
+      <div class="landing-player" aria-label="Birthday countdown audio player"><div><strong>Your Birthday Jingle</strong></div><button id="landing-play" class="play-mini" type="button" aria-label="Play birthday jingle">▶</button></div>
+      <form id="unlock-form" class="unlock-form">
+        <label for="password">Have the password? Enter the broadcast</label>
+        <div class="password-row"><input id="password" type="password" autocomplete="off" placeholder="password" required><button class="icon-button" type="submit" aria-label="Unlock broadcast">→</button></div>
+        <p id="unlock-error" class="error" role="alert" aria-live="polite"></p>
+      </form>
+      <p class="lock-foot">Broadcasting from Bangalore · 91.02 FM · 19 SEPTEMBER · 12:00 AM IST</p>
+    </section>
+
+    <section id="broadcast" class="hidden">
+      <header class="topbar"><button id="home-button" class="wordmark" type="button">[HER NAME] <span>FM</span></button><div class="live"><i></i> LIVE · BIRTHDAY EDITION</div><button id="menu-button" class="menu-button" type="button" aria-label="Open navigation">MENU</button></header>
+      <nav id="nav" class="nav" aria-label="Broadcast navigation">
+        <button data-screen="morning" type="button">01 · Morning show</button><button data-screen="playlist" type="button">02 · The playlist</button><button data-screen="wishes" type="button">03 · 12 months ahead</button><button data-screen="noticed" type="button">04 · Things I've noticed</button><button data-screen="final" type="button">05 · Final broadcast</button>
+      </nav>
+
+      <div id="screens">
+        <section id="morning" class="content-screen active"><div class="screen-number">01 / 05</div><p class="eyebrow">THE MORNING SHOW</p><h2>For the year<br>you’re about to have.</h2><div class="two-col"><div class="letter"><p>Another year of you.</p><p>I hope this one brings you the things you’ve been wishing for, the things you haven’t even thought of yet, and a ridiculous amount of happiness along the way.</p><p>I hope you get ambitious things, exciting things, peaceful things and wonderfully ordinary things.</p><p>I hope you laugh a lot. I hope you’re proud of yourself. And I hope you remember that you don’t have to have everything figured out.</p></div><div class="forecast"><div class="forecast-head"><span>TODAY’S FORECAST</span><span>☀ BIRTHDAY</span></div><div class="forecast-row"><span>Happiness</span><b>97%</b></div><div class="forecast-row"><span>Good things</span><b>94%</b></div><div class="forecast-row"><span>Laughing</span><b>100%</b></div><div class="forecast-row"><span>Cake</span><b>200%</b></div><div class="forecast-row"><span>Being loved</span><b>∞</b></div></div></div></section>
+        <section id="playlist" class="content-screen"><div class="screen-number">02 / 05</div><p class="eyebrow">THE PLAYLIST</p><h2>Songs I picked<br>for you.</h2><div id="playlist-list" class="playlist-list"></div><p class="small-note">Press play on any track for a tiny transmission.</p></section>
+        <section id="wishes" class="content-screen"><div class="screen-number">03 / 05</div><p class="eyebrow">THE YEAR AHEAD</p><h2>12 wishes<br>for your next year.</h2><div id="wishes-grid" class="wishes-grid"></div></section>
+        <section id="noticed" class="content-screen"><div class="screen-number">04 / 05</div><p class="eyebrow">FIELD NOTES · 02 MONTHS</p><h2>A few things<br>I’ve noticed.</h2><div id="noticed-list" class="noticed-list"></div></section>
+        <section id="final" class="content-screen final-screen"><div class="screen-number">05 / 05</div><p class="eyebrow">FINAL BROADCAST</p><h2>Okay, I’m dropping<br>the radio-host act now.</h2><div class="final-card"><button id="final-play" class="play-button" type="button"><span>▶</span> PLAY VOICE NOTE</button><p id="final-caption">Your voice note will play here once you add <code>audio/final-broadcast.mp3</code>.</p></div><div class="complete"><span>BROADCAST COMPLETE</span><strong>HAPPY BIRTHDAY<br>[HER NAME]</strong><p>I hope this year is really good to you.</p><small>— Your favourite listener</small></div><p class="ps">P.S. Yes, I built an entire website instead of just sending you a text. I regret nothing.</p></section>
+      </div>
+      <footer class="player"><div class="player-meta"><span class="equalizer">▮▮▮</span><div><b id="now-playing">BIRTHDAY FM</b><small id="now-detail">Your private broadcast is on air</small></div></div><button id="player-play" class="play-mini" type="button" aria-label="Play or pause">▶</button><div id="player-seek" class="player-line" role="slider" aria-label="Audio progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><span></span></div></footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="content.enc.js?v=20260916-33"></script><script src="app.js?v=20260916-33"></script><script src="notices.js?v=20260916-33"></script><script src="new-notices.js?v=20260916-33"></script><script src="latest-notices.js?v=20260916-33"></script>
+</body>
+</html>
