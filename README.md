@@ -6,7 +6,7 @@ A responsive, static birthday-radio experience for GitHub Pages. The landing pag
 
 1. Edit `content.json` with her name, songs, wishes, and personal notes, or update the built-in preview content in `app.js`.
 2. Add your recording as `audio/final-broadcast.mp3` (create the folder if needed).
-3. The default password is `starlight`. Change `DEMO_PASSWORD` in `app.js` before sharing.
+3. The default password is `myFineShyt`. Change `DEMO_PASSWORD` in `app.js` before sharing.
 
 Optional: if you later want the messages hidden from casual source inspection too, use the included client-side encryption helper after installing Node:
 
