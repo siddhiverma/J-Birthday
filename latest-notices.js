@@ -6,7 +6,7 @@ const latestNotices=[
 ['Ambition','Watching how hard you work is genuinely inspiring.'],
 ['Spontaneity','Coorg was evidence.'],
 ['Comfort','Somehow, talking to you has always felt easy.'],
-['Your very questionable taste in television','Evidence: Traitors, KKK, LockUp, and now GOT'],
+['Your very questionable taste in television','Evidence: Traitors, KKK, LockUp, Alliance, and now GOT'],
 ['Fun','You have an almost unreasonable ability to make everything more fun.'],
 ['Hotness','I could write something thoughtful here, but honestly… you’re just really fucking hot. 😌']
 ];
